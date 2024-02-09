@@ -12,7 +12,9 @@ Seems to be used with a URL parameter. We could probably fuzz the `fwdClientCode
 
 ### Snyk SAST
 
-TODO
+10 Medium, 5 Low
+
+Nothing significant.
 
 ### jadx
 
