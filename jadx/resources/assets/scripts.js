@@ -1,0 +1,1 @@
+function changeScreen(newScreen) { document.body.id = newScreen }

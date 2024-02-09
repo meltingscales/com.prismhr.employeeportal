@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root { --prismhr: rgb(60, 136, 169); }
+
+@media (prefers-color-scheme: dark) {
+  :root { --prismhr: white; }
+}
+
+body {
+  color: var(--prismhr);
+  font-family: 'Open Sans', sans-serif;
+  padding: 2em;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+  }
+}
+
+#logo {
+  background-size: contain;
+  display: block;
+  height: 125px;
+  margin: auto;
+  margin-bottom: 3em;
+  margin-top: 60px;
+  width: 194px;
+}
+
+@media (prefers-color-scheme: light) { #logo { background-image: url(logo_light.svg); } }
+@media (prefers-color-scheme: dark) { #logo { background-image: url(logo_dark.svg); } }
+
+h1 {
+  font-size: 1em;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid var(--prismhr);
+  border-radius: 2em;
+  color: var(--prismhr);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 2em;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button svg {
+  height: 1em;
+  margin-right: .3em;
+  vertical-align: -.1em;
+}
+
+button svg path {
+  fill: var(--prismhr);
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+input {
+  width: 100%;
+  border-radius: 0;
+  -webkit-appearance: none;
+  line-height: 2em;
+  border: 1px solid silver;
+}
+
+.backBtn {
+  border: none;
+  bottom: .5em;
+  margin-left: -2.5em;
+  position: absolute;
+  text-align: left;
+  width: 50px;
+}
+
+.backBtn svg {
+  height: 1.5em;
+}
+
+p.narrow {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+p.narrow button {
+  width: 80%;
+}
+
+#qr {
+  background-color: white;
+  background-image: url(QR.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  border: 3px solid var(--prismhr);
+  border-radius: 50%;
+  height: 150px;
+  margin: auto;
+  margin-bottom: 1.5em;
+  width: 150px;
+}
+
+body#account-access #account-access-screen { display: inherit; }
+body#account-access #qr-code-screen,
+body#account-access #access-code-screen { display: none; }
+
+body#qr-code #qr-code-screen { display: inherit; }
+body#qr-code #account-access-screen,
+body#qr-code #access-code-screen { display: none; }
+
+body#access-code #access-code-screen { display: inherit; }
+body#access-code #qr-code-screen,
+body#access-code #account-access-screen { display: none; }

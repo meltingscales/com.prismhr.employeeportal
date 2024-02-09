@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+<body id="account-access">
+<div id="logo"></div>
+
+<div id="account-access-screen">
+    <h1>Account Access</h1>
+    <p>Choose one of the options below to connect to your company's portal.</p>
+    <p>
+        <button onclick="changeScreen('qr-code')">
+            <svg focusable="false" role="img" viewBox="0 0 448 512"><path d="M160 32H32C14.33 32 0 46.33 0 64v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V64C192 46.33 177.7 32 160 32zM128 160H64V96h64V160zM160 288H32c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32v-128C192 302.3 177.7 288 160 288zM128 416H64v-64h64V416zM416 32h-128c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V64C448 46.33 433.7 32 416 32zM384 160h-64V96h64V160zM352 480h32v-32h-32V480zM416 320h-64V288h-96v192h64v-96h32v32h96V288h-32V320zM416 480h32v-32h-32V480z"></path></svg>
+            QR Code
+        </button>
+    </p>
+    <p>
+        <button onclick="changeScreen('access-code');">
+            <svg focusable="false" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M0 96C0 60.65 28.65 32 64 32H448C483.3 32 512 60.65 512 96V416C512 451.3 483.3 480 448 480H64C28.65 480 0 451.3 0 416V96zM96 160C113.7 160 128 145.7 128 128C128 110.3 113.7 96 96 96C78.33 96 64 110.3 64 128C64 145.7 78.33 160 96 160zM448 128C448 114.7 437.3 104 424 104H184C170.7 104 160 114.7 160 128C160 141.3 170.7 152 184 152H424C437.3 152 448 141.3 448 128z"></path></svg>
+            Access Code
+        </button>
+    </p>
+</div>
+
+<div id="qr-code-screen">
+    <div id="qr"></div>
+    <p class="narrow">
+        <button onclick="Android.callWebKit('qr-code')">
+            <svg focusable="false" role="img" viewBox="0 0 512 512"><path d="M194.6 32H317.4C338.1 32 356.4 45.22 362.9 64.82L373.3 96H448C483.3 96 512 124.7 512 160V416C512 451.3 483.3 480 448 480H64C28.65 480 0 451.3 0 416V160C0 124.7 28.65 96 64 96H138.7L149.1 64.82C155.6 45.22 173.9 32 194.6 32H194.6zM256 384C309 384 352 341 352 288C352 234.1 309 192 256 192C202.1 192 160 234.1 160 288C160 341 202.1 384 256 384z"></path></svg>
+            Scan QR Code
+        </button>
+    </p>
+    <p class="narrow">
+        <small>The QR code is available under Account Settings in Employee Portal.</small>
+    </p>
+    <button class="backBtn" onclick="changeScreen('account-access')">
+        <svg focusable="false" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M448 224v64c0 17.67-14.33 32-32 32h-192v96c0 12.94-7.797 24.61-19.75 29.56c-11.97 4.953-25.72 2.219-34.88-6.938l-160-160C3.125 272.4 0 264.2 0 256s3.125-16.38 9.375-22.62l160-160c9.156-9.156 22.91-11.89 34.88-6.938C216.2 71.39 224 83.06 224 96v96h192C433.7 192 448 206.3 448 224z"></path></svg>
+    </button>
+</div>
+
+<div id="access-code-screen">
+    <h1>Access Code</h1>
+    <p>
+        <input id="access-code-input" type="text">
+    </p>
+    <p class="narrow">
+        <button onclick="Android.callWebKit(document.getElementById('access-code-input').value)">Submit</button>
+    </p>
+    <p class="narrow">
+        <small>The Access Code is available under Account Settings in Employee Portal.</small>
+    </p>
+    <button class="backBtn" onclick="changeScreen('account-access')">
+        <svg focusable="false" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M448 224v64c0 17.67-14.33 32-32 32h-192v96c0 12.94-7.797 24.61-19.75 29.56c-11.97 4.953-25.72 2.219-34.88-6.938l-160-160C3.125 272.4 0 264.2 0 256s3.125-16.38 9.375-22.62l160-160c9.156-9.156 22.91-11.89 34.88-6.938C216.2 71.39 224 83.06 224 96v96h192C433.7 192 448 206.3 448 224z"></path></svg>
+    </button>
+</div>
+</body>
+</html>
+
