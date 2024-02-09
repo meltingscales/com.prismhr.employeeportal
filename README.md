@@ -2,11 +2,13 @@
 
 ### gitleaks
 
-TODO
+1 false positive. `keyCycleOscillator6 = keyCycleOscillator5;`
 
 ### apkurlgrep
 
-TODO
+Found 1 URL: https://epycorp-ep.prismhr.com/apis/ep/peos?fwdClientCode=
+
+Seems to be used with a URL parameter. We could probably fuzz the `fwdClientCode` parameter.
 
 ### Snyk SAST
 
@@ -14,7 +16,7 @@ TODO
 
 ### jadx
 
-TODO
+Nothing significant.
 
 ## Commands
 

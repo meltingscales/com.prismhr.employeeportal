@@ -1,0 +1,22 @@
+[
+ {
+  "Description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+  "StartLine": 1245,
+  "EndLine": 1245,
+  "StartColumn": 33,
+  "EndColumn": 74,
+  "Match": "keyCycleOscillator6 = keyCycleOscillator5;",
+  "Secret": "keyCycleOscillator5",
+  "File": "jadx/sources/androidx/constraintlayout/core/motion/Motion.java",
+  "SymlinkFile": "",
+  "Commit": "10a67135457553fd1f3ec9d76320e7e25c18163e",
+  "Entropy": 3.6818807,
+  "Author": "Henry Post",
+  "Email": "henryfbp@gmail.com",
+  "Date": "2024-02-09T01:59:06Z",
+  "Message": "decompile with jadx and apktool",
+  "Tags": [],
+  "RuleID": "generic-api-key",
+  "Fingerprint": "10a67135457553fd1f3ec9d76320e7e25c18163e:jadx/sources/androidx/constraintlayout/core/motion/Motion.java:generic-api-key:1245"
+ }
+]
